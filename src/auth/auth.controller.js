@@ -27,7 +27,7 @@ export const login = async (req, res, ) => {
             });
         }
  
-        const validPassword = bcrypt.compareSync(password, user.password);
+        const validPassword = verify( user.password,password);
         if(!validPassword){
             return res.status(400).json({
                 msg: 'La contraseña es incorecta'
@@ -72,7 +72,7 @@ export const register = async (req, res) => {
             email: data.email,
             phone: data.phone,
             password: encryptedPassword,
-            role: data.role,
+            rol: data.rol,
             profilePicture
         })
  
