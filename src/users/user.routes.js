@@ -5,6 +5,8 @@ import { existeUsuarioById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js"
 import {uploadProfilePicture} from "../middlewares/multer-upload.js"
 import { deleteUser } from "./user.controller.js";
+import { tieneRol } from "../middlewares/validar-roles.js";
+import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router();
 
@@ -33,6 +35,8 @@ router.put(
 router.delete(
     "/:id",
     [
+        validarJWT,
+        tieneRol("ADMIN_ROLE","VENTAS_ROLE"),
         check("id", "No es un ID valido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos

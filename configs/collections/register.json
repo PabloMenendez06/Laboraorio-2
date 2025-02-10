@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "login/register",
+    "collectionId": "34b998bf-a55b-4905-a76e-ef441208876e",
+    "dateExported": "2025-02-10T16:43:28.366Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "881b9c5f-a50b-4050-886b-be6eac2fc7aa",
+            "colId": "34b998bf-a55b-4905-a76e-ef441208876e",
+            "containerId": "",
+            "name": "http://localhost:3001/adoptionSystem/v1/auth/login",
+            "url": "http://localhost:3001/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-10T16:41:57.871Z",
+            "modified": "2025-02-10T16:41:57.871Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"email\":\"pablo@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "1uKdjjriit6z2YzX-jm7dNRPD6A0j1zN40-7C1QknDeKctloDqh4lanoIyuO2hri-tJ6wXmrEad6fPthuYrH7g"
+}
