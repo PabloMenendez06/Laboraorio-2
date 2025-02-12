@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { addAppointment, defuseAppointment, listAppointments, searchAppointment, updateAppointment } from "./appoinment.controller.js";
+import { addAppointment, defuseAppointment, listAppointments, searchAppointment, updateAppointment } from "./appointment.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js"
 import { existeCitaById } from "../helpers/db-validator.js";

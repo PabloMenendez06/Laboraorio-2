@@ -1,5 +1,5 @@
 import { response } from "express";
-import Appoinment from "../citas/appoinment.model.js";
+import Appoinment from "./appointment.model.js";
 import Pet from "../pet/pet.model.js"
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { check } from "express-validator";
@@ -71,7 +71,7 @@ export const addAppointment = async (req, res) => {
         res.status(500).json({
             succes: false,
             msg: 'Error al agregar la cita',
-            error
+            error: error.message || error
         })
     }
 }

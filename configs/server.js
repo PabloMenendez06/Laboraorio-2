@@ -9,6 +9,7 @@ import limiter from '../src/middlewares/validar-cant-peticiones.js';
 import authRoutes from '../src/auth/auth.routes.js'
 import userRoutes from '../src/users/user.routes.js'
 import petRoutes from '../src/pet/pet.routes.js'
+import appoinmentRoutes from '../src/citas/appointments.routes.js'
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -38,7 +39,7 @@ const conectarDB = async () => {
 
 export const initServer = async () => {
     const app = express();
-    const port = process.env.PORT || 3000;
+    const port = process.env.PORT || 3001;
 
     try {
         middlewares(app);
