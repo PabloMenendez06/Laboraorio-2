@@ -25,3 +25,17 @@ export const existeUsuarioById = async(id = ' ') =>{
         
     }
 }
+export const existePetById = async (id = '') => {
+    const existePet = await Pet.findById(id);
+
+    if (!existePet){
+        throw new Error(`La mascota ${id} no existe`)
+    }
+}
+
+export const existeCitaById = async (id = '') => {
+    const existeCita = await Appoinment.findById(id);
+    if(!existeCita){
+        throw new Error(`El ID ${id} no existe en la base de datos`);
+    }
+}
