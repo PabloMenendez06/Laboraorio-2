@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "67b33569c6b0b837dd602226"
+  },
+  "name": "Max",
+  "description": "perro salchica",
+  "age": 3,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67aa293f2819e7ece27b563d"
+  },
+  "status": true
+}]
